@@ -1,0 +1,13 @@
+package com.itmo.kolobok;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class KolobokApplicationTests {
+
+    @Test
+    void contextLoads() {
+    }
+
+}
