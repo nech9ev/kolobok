@@ -1,5 +1,4 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import org.springframework.boot.gradle.tasks.bundling.BootJar
 
 plugins {
     java
@@ -34,13 +33,10 @@ dependencies {
     implementation(kotlin("stdlib-jdk8"))
 }
 
-tasks.named<BootJar>("bootJar") {
-    mainClass.set("com.itmo.kolobok.KolobokApplication")
-}
-
 tasks {
     withType<Jar> {
         manifest {
+            enabled = true
             attributes["Main-Class"] = "com.itmo.kolobok.KolobokApplication"
         }
     }
