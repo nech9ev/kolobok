@@ -38,6 +38,14 @@ tasks.named<BootJar>("bootJar") {
     mainClass.set("com.itmo.kolobok.KolobokApplication")
 }
 
+tasks {
+    withType<Jar> {
+        manifest {
+            attributes["Main-Class"] = "com.itmo.kolobok.KolobokApplication"
+        }
+    }
+}
+
 tasks.withType<Test> {
     useJUnitPlatform()
 }
