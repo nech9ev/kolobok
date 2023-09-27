@@ -33,14 +33,14 @@ dependencies {
     implementation(kotlin("stdlib-jdk8"))
 }
 
-tasks {
-    withType<Jar> {
-        manifest {
-            enabled = true
-            attributes["Main-Class"] = "com.itmo.kolobok.KolobokApplication"
-        }
-    }
-}
+//tasks {
+//    withType<Jar> {
+//        manifest {
+//            enabled = true
+//            attributes["Main-Class"] = "com.itmo.kolobok.KolobokApplication"
+//        }
+//    }
+//}
 
 tasks.withType<Test> {
     useJUnitPlatform()
