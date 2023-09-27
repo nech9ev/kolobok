@@ -11,7 +11,8 @@ class PedikRandomHandler : CommandHandler<SendMessage> {
         val chatId = update.message.chatId.toString()
 
         val randomUser = getChatUsers().randomOrNull()
-
+        if (Pediks.users.getOrDefault(update.message.from.userName, 0) == 0
+            && update.message.from.userName != "nech9ev") return null
         if (randomUser != null) {
             val oldCount = Pediks.users.getOrDefault(randomUser, 0)
             Pediks.users[randomUser] = oldCount + 1
